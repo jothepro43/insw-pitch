@@ -1,0 +1,26 @@
+{
+  "run": 0,
+  "branch": "run/2026-04-07-0500",
+  "type": "initial_build",
+  "timestamp_utc": "2026-04-07T05:00:00Z",
+  "timestamp_edt": "2026-04-07 01:00 AM EDT",
+  "market": {
+    "insw_price": 74.12,
+    "insw_change_pct": 0.62,
+    "brent": 104.11,
+    "polymarket_yes_pct": 22
+  },
+  "mc": {
+    "mean_target_8x": 95,
+    "upside_pct": 28,
+    "p_profit": 44.2,
+    "scenario_weights": { "quick": 0.15, "goldman": 0.30, "extended": 0.30, "prolonged": 0.20, "black_swan": 0.05 }
+  },
+  "bilawal": { "video_count": 172, "latest": "Ex-Google PM Builds God's Eye to Monitor Iran in 4D" },
+  "events": [
+    "Initial site build — all charts, AIS vessel map, GDELT chart, OSINT section",
+    "Hormuz crisis at 38 days. Iran blocking ~20M bbl/day",
+    "Zero retail coverage confirmed — 0 INSW mentions in 64K-member Dumb Money Discord",
+    "Polymarket: 22% YES (Hormuz normal by Apr 30)"
+  ]
+}
