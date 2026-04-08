@@ -1,4 +1,18 @@
+# Build artifacts
 *.pyc
 __pycache__/
 .DS_Store
 *.log
+
+# Sensitive — never commit
+.env
+*.env
+secrets.json
+credentials.json
+discord-exports/
+tool_calls/
+insw_fleet_tracker.py
+
+# Internal workspace artifacts
+cron_tracking/
+mc_inputs_raw.json
