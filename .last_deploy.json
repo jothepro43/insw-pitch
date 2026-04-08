@@ -1,1 +1,42 @@
-{"branch": "run/2026-04-08-2055", "test": true, "committed_at": "2026-04-08T20:55:32Z"}
+{
+  "run": 1,
+  "branch": "run/2026-04-08-0205",
+  "type": "material_update_ceasefire",
+  "timestamp_utc": "2026-04-08T02:05:00Z",
+  "timestamp_edt": "2026-04-07 10:05 PM EDT",
+  "market": {
+    "insw_price": 74.00,
+    "insw_change_pct": 0.45,
+    "insw_close": 73.67,
+    "brent": 94.74,
+    "brent_change_pct": -13.3,
+    "polymarket_yes_pct": 62,
+    "polymarket_prev": 22,
+    "polymarket_delta": 40
+  },
+  "mc": {
+    "mean_target_8x": 119,
+    "upside_pct": 61,
+    "p_profit": 65.1,
+    "mean_dividend": 12.95,
+    "div_yield_pct": 17.5,
+    "mean_eps": 14.89,
+    "p50": 103,
+    "p5_bear": 39,
+    "p95_bull": 267,
+    "scenario_weights": { "quick": 0.15, "goldman": 0.30, "extended": 0.30, "prolonged": 0.20, "black_swan": 0.05 }
+  },
+  "bilawal": { "video_count": 172, "latest": "Ex-Google PM Uses God's Eye to Reveal Iran's Chokehold on the World's Oil", "views": 524000 },
+  "trigger": "polymarket_jump_+40pts",
+  "notified": true,
+  "events": [
+    "MATERIAL: Trump agreed 2-week ceasefire via Pakistan PM Sharif mediation (~6:32 PM ET)",
+    "Iran FM Araghchi: safe passage via coordination with Iran Armed Forces for 2 weeks",
+    "Brent peaked $117 then crashed to $94.74 (-13.3% on day)",
+    "INSW barely moved: $73.67 close, AH $74.00 (+0.45%) — Q1 earnings already locked in",
+    "Polymarket: 22% → 62% YES (Hormuz normal by Apr 30) — +40pt jump",
+    "MC re-run: mean target $119 (+61%), P(profit) 65.1%, div $12.95 (17.5% yield)",
+    "CONFIG master variable block added; all site values now driven by CONFIG object",
+    "Stale $154 target and 91% prob-of-profit values corrected to match MC"
+  ]
+}
