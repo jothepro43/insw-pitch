@@ -451,7 +451,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <li><a href="#monte-carlo">Model</a></li>
       <li><a href="#scenarios">Scenarios</a></li>
       <li><a href="#risks">Risks</a></li>
-      <li><a href="#surveillance" style="color:#20808D">INTEL</a> <a href="#osint" style="color:#5591C7">OSINT</a> <a href="#altdata" style="color:#D19900">ALT DATA</a> <a href="#latest" style="color:#DD6974">LATEST</a> <a href="#conclusion">Conclusion</a></li>
+      <li><a href="#surveillance" style="color:#20808D">INTEL</a> <a href="#osint" style="color:#5591C7">OSINT</a> <a href="#altdata" style="color:#D19900">ALT DATA</a> <a href="#latest" style="color:#DD6974">LATEST</a> <a href="#conclusion">Conclusion</a> <a href="#version-history" style="color:#20808D;">HISTORY</a></li>
     </ul>
   </div>
 </nav><div style="background:rgba(32,128,141,0.15);border-bottom:1px solid rgba(32,128,141,0.4);padding:9px 24px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#c9d1d9;">
@@ -858,6 +858,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <a class="source-tag" href="https://www.morganstanley.com/ideas/energy-commodities" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Morgan Stanley</a>
       <a class="source-tag" href="https://www.statista.com/topics/1690/tanker-shipping/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Statista (Premium)</a>
       <a class="source-tag" href="https://pitchbook.com/search?q=International+Seaways" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">PitchBook</a>
+      <a class="source-tag" href="https://github.com/jothepro43/insw-pitch" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;border-color:rgba(32,128,141,0.7);color:#20808D;">GitHub: insw-pitch</a>
       <a class="source-tag" href="https://www.cbinsights.com/research/maritime-shipping-technology/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">CB Insights</a>
       <a class="source-tag" href="https://www.perplexity.ai/finance/INSW" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Perplexity Finance</a>
       <a class="source-tag" href="https://www.perplexity.ai/computer" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Perplexity Computer</a>
@@ -2146,6 +2147,83 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
           The re-rating hasn't happened — earnings print April 30
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ VERSION HISTORY ═══════════════ -->
+<section id="version-history" style="background:rgba(32,128,141,0.03);border-top:1px solid rgba(32,128,141,0.2);padding:3rem 0;">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-num">12 — Audit Trail</div>
+      <h2>Version History</h2>
+      <p class="section-subtitle">Every monitor run is version-controlled. Full source at <a href="https://github.com/jothepro43/insw-pitch" target="_blank" rel="noopener" style="color:#20808D;text-decoration:none;border-bottom:1px solid rgba(32,128,141,0.4);">github.com/jothepro43/insw-pitch</a></p>
+    </div>
+
+    <div class="fade-in" style="overflow-x:auto;margin-bottom:2rem;">
+      <table style="width:100%;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:0.75rem;">
+        <thead>
+          <tr style="border-bottom:1px solid rgba(32,128,141,0.4);">
+            <th style="text-align:left;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;white-space:nowrap;">Branch</th>
+            <th style="text-align:left;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;white-space:nowrap;">Time (EDT)</th>
+            <th style="text-align:left;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;white-space:nowrap;">Trigger</th>
+            <th style="text-align:right;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;">INSW</th>
+            <th style="text-align:right;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;">Brent</th>
+            <th style="text-align:right;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;">Poly YES</th>
+            <th style="text-align:right;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;">MC Target</th>
+            <th style="text-align:right;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;">P(profit)</th>
+            <th style="text-align:right;padding:0.6rem 0.8rem;color:#8b949e;font-weight:600;white-space:nowrap;">Link</th>
+          </tr>
+        </thead>
+        <tbody id="version-history-tbody">
+          <tr style="border-bottom:1px solid rgba(48,54,61,0.6);">
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;white-space:nowrap;">run/2026-04-07-0500</td>
+            <td style="padding:0.55rem 0.8rem;color:#8b949e;white-space:nowrap;">Apr 7, 1:00 AM</td>
+            <td style="padding:0.55rem 0.8rem;color:#8b949e;">Initial build</td>
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;text-align:right;">$74.12</td>
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;text-align:right;">$104.11</td>
+            <td style="padding:0.55rem 0.8rem;color:#DD6974;text-align:right;">22%</td>
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;text-align:right;">$95</td>
+            <td style="padding:0.55rem 0.8rem;color:#DD6974;text-align:right;">44.2%</td>
+            <td style="padding:0.55rem 0.8rem;text-align:right;"><a href="https://github.com/jothepro43/insw-pitch/tree/run/2026-04-07-0500" target="_blank" rel="noopener" style="color:#20808D;text-decoration:none;">&#8599; view</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(48,54,61,0.6);">
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;white-space:nowrap;">run/2026-04-08-0205</td>
+            <td style="padding:0.55rem 0.8rem;color:#8b949e;white-space:nowrap;">Apr 7, 10:05 PM</td>
+            <td style="padding:0.55rem 0.8rem;color:#57ab5a;">Ceasefire — Poly +40pts</td>
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;text-align:right;">$74.00</td>
+            <td style="padding:0.55rem 0.8rem;color:#DD6974;text-align:right;">$94.74</td>
+            <td style="padding:0.55rem 0.8rem;color:#57ab5a;text-align:right;">62%</td>
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;text-align:right;">$119</td>
+            <td style="padding:0.55rem 0.8rem;color:#D19900;text-align:right;">65.1%</td>
+            <td style="padding:0.55rem 0.8rem;text-align:right;"><a href="https://github.com/jothepro43/insw-pitch/tree/run/2026-04-08-0205" target="_blank" rel="noopener" style="color:#20808D;text-decoration:none;">&#8599; view</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(48,54,61,0.6);background:rgba(32,128,141,0.04);">
+            <td style="padding:0.55rem 0.8rem;color:#c9d1d9;white-space:nowrap;">run/2026-04-08-1330</td>
+            <td style="padding:0.55rem 0.8rem;color:#8b949e;white-space:nowrap;">Apr 8, 9:30 AM</td>
+            <td style="padding:0.55rem 0.8rem;color:#DD6974;">Iran 10-pt plan — Poly &#8722;25pts</td>
+            <td style="padding:0.55rem 0.8rem;color:#DD6974;text-align:right;">$72.09</td>
+            <td style="padding:0.55rem 0.8rem;color:#DD6974;text-align:right;">$91.79</td>
+            <td style="padding:0.55rem 0.8rem;color:#DD6974;text-align:right;">37%</td>
+            <td style="padding:0.55rem 0.8rem;color:#57ab5a;text-align:right;font-weight:700;">$165</td>
+            <td style="padding:0.55rem 0.8rem;color:#57ab5a;text-align:right;font-weight:700;">91.8%</td>
+            <td style="padding:0.55rem 0.8rem;text-align:right;"><a href="https://github.com/jothepro43/insw-pitch/tree/run/2026-04-08-1330" target="_blank" rel="noopener" style="color:#20808D;text-decoration:none;">&#8599; view</a></td>
+          </tr>
+          <!-- MONITOR AUTO-INSERTS NEW ROWS ABOVE THIS COMMENT -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fade-in" style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+      <a href="https://github.com/jothepro43/insw-pitch" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:0.5rem;background:#161b22;border:1px solid rgba(32,128,141,0.5);border-radius:8px;padding:0.6rem 1.1rem;font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#20808D;text-decoration:none;transition:border-color 0.2s;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="flex-shrink:0;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        github.com/jothepro43/insw-pitch
+      </a>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#8b949e;">
+        Every scheduled monitor run pushes a new branch &mdash; full audit trail of all data, MC outputs, and site changes
+      </span>
     </div>
   </div>
 </section>
