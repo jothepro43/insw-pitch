@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "title": "INSW Monte Carlo Simulation Results",
+    "iterations": 10000,
+    "generated": "2026-04-08T13:34:15.663939+00:00",
+    "model_version": "1.0",
+    "random_seed": 42
+  },
+  "summary": {
+    "mean_eps": 20.62,
+    "median_eps": 19.51,
+    "std_eps": 9.02,
+    "min_eps": 2.96,
+    "max_eps": 61.05,
+    "mean_price_8x": 164.98,
+    "median_price_8x": 156.09,
+    "mean_dividend": 17.53,
+    "dividend_yield_pct": 24.1,
+    "p_above_current": 91.8,
+    "p_above_100": 80.1,
+    "p_above_150": 53.0,
+    "p_above_200": 29.8,
+    "current_price": 72.61,
+    "upside_pct_mean_8x": 127.2
+  },
+  "percentiles": {
+    "5": {
+      "eps": 7.62,
+      "price_6x": 45.7,
+      "price_8x": 60.93,
+      "price_10x": 76.17,
+      "price_12x": 91.4,
+      "dividend": 6.42
+    },
+    "10": {
+      "eps": 9.71,
+      "price_6x": 58.27,
+      "price_8x": 77.7,
+      "price_10x": 97.12,
+      "price_12x": 116.54,
+      "dividend": 8.23
+    },
+    "25": {
+      "eps": 13.66,
+      "price_6x": 81.98,
+      "price_8x": 109.31,
+      "price_10x": 136.63,
+      "price_12x": 163.96,
+      "dividend": 11.62
+    },
+    "50": {
+      "eps": 19.51,
+      "price_6x": 117.06,
+      "price_8x": 156.09,
+      "price_10x": 195.11,
+      "price_12x": 234.13,
+      "dividend": 16.49
+    },
+    "75": {
+      "eps": 26.67,
+      "price_6x": 159.99,
+      "price_8x": 213.32,
+      "price_10x": 266.65,
+      "price_12x": 319.98,
+      "dividend": 22.66
+    },
+    "90": {
+      "eps": 33.15,
+      "price_6x": 198.9,
+      "price_8x": 265.2,
+      "price_10x": 331.5,
+      "price_12x": 397.8,
+      "dividend": 28.37
+    },
+    "95": {
+      "eps": 36.92,
+      "price_6x": 221.53,
+      "price_8x": 295.37,
+      "price_10x": 369.21,
+      "price_12x": 443.05,
+      "dividend": 31.81
+    }
+  },
+  "quarterly": {
+    "q1_eps_estimate": 3.5,
+    "q2_eps_mean": 9.38,
+    "q3_eps_mean": 5.05,
+    "q4_eps_mean": 2.69
+  },
+  "scenario_results": [
+    {
+      "name": "Quick Resolution",
+      "probability": 0.1,
+      "n_iterations": 984,
+      "mean_eps": 10.25,
+      "median_eps": 9.99,
+      "mean_price_8x": 82.01,
+      "mean_dividend": 8.73
+    },
+    {
+      "name": "Goldman Base Case",
+      "probability": 0.25,
+      "n_iterations": 2402,
+      "mean_eps": 14.64,
+      "median_eps": 14.22,
+      "mean_price_8x": 117.13,
+      "mean_dividend": 12.46
+    },
+    {
+      "name": "Extended Crisis",
+      "probability": 0.35,
+      "n_iterations": 3561,
+      "mean_eps": 21.6,
+      "median_eps": 21.2,
+      "mean_price_8x": 172.79,
+      "mean_dividend": 18.35
+    },
+    {
+      "name": "Prolonged / Houthi-Style",
+      "probability": 0.25,
+      "n_iterations": 2551,
+      "mean_eps": 31.71,
+      "median_eps": 31.18,
+      "mean_price_8x": 253.69,
+      "mean_dividend": 26.94
+    },
+    {
+      "name": "Black Swan Reopening",
+      "probability": 0.05,
+      "n_iterations": 502,
+      "mean_eps": 6.31,
+      "median_eps": 6.11,
+      "mean_price_8x": 50.45,
+      "mean_dividend": 5.36
+    }
+  ],
+  "parameters_used": {
+    "fleet": {
+      "VLCC": {
+        "total": 10,
+        "tc_out": 0,
+        "spot": 10,
+        "avg_dwt": 300000
+      },
+      "Suezmax": {
+        "total": 13,
+        "tc_out": 3,
+        "spot": 10,
+        "avg_dwt": 158500
+      },
+      "Aframax": {
+        "total": 5,
+        "tc_out": 2,
+        "spot": 3,
+        "avg_dwt": 113000
+      },
+      "LR1": {
+        "total": 9,
+        "tc_out": 0,
+        "spot": 9,
+        "avg_dwt": 74200
+      },
+      "MR": {
+        "total": 25,
+        "tc_out": 6,
+        "spot": 19,
+        "avg_dwt": 50200
+      }
+    },
+    "opex": {
+      "VLCC": 9500,
+      "Suezmax": 8500,
+      "Aframax": 8000,
+      "LR1": 7500,
+      "MR": 7000
+    },
+    "tc_out_rates": {
+      "VLCC": 0,
+      "Suezmax": 42000,
+      "Aframax": 30000,
+      "LR1": 0,
+      "MR": 20000
+    },
+    "fixed_costs_quarterly_mm": 65.6,
+    "tax_rate": 0.03,
+    "shares_diluted": 49595945,
+    "payout_ratio_mean": 0.85,
+    "rate_sigma": {
+      "VLCC": 0.35,
+      "Suezmax": 0.3,
+      "Aframax": 0.32,
+      "LR1": 0.25,
+      "MR": 0.25
+    },
+    "pe_multiples": {
+      "bear": 6.0,
+      "base": 8.0,
+      "bull": 10.0,
+      "euphoria": 12.0
+    }
+  }
+}

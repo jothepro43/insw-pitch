@@ -1,0 +1,340 @@
+{
+  "metadata": {
+    "title": "INSW Monte Carlo Simulation Input Parameters",
+    "generated": "2026-03-31",
+    "purpose": "Perplexity Stock Pitch Competition — INSW Price Target Model",
+    "sources": [
+      "INSW Q4 2025 Earnings Transcript (2026-02-26)",
+      "INSW 10-K FY2024 (SEC EDGAR)",
+      "INSW March 2026 Investor Deck",
+      "Baltic Exchange (BDTI/BCTI indices)",
+      "S&P Global/Platts tanker rate assessments",
+      "Polymarket prediction markets",
+      "Metaculus community forecasts",
+      "Goldman Sachs, JPMorgan, Barclays, Morgan Stanley analyst notes",
+      "aisstream.io AIS vessel tracking (verified API connection)",
+      "MyShipTracking, Maritime Optima (vessel positions)"
+    ]
+  },
+
+  "company": {
+    "ticker": "INSW",
+    "name": "International Seaways Inc.",
+    "exchange": "NYSE",
+    "shares_outstanding": 49335230,
+    "shares_diluted": 49595945,
+    "current_price": 72.61,
+    "market_cap_mm": 3590,
+    "net_debt_mm": 459,
+    "enterprise_value_mm": 4049,
+    "book_value_per_share": 40.95,
+    "net_ltv_pct": 13,
+    "unencumbered_vessels": 31,
+    "liquidity_mm": 724
+  },
+
+  "fleet": {
+    "total_vessels": 67,
+    "by_class": {
+      "VLCC": {"count": 10, "avg_dwt": 300000, "notes": "12 originally, 2 sold. 3 newbuilds (2023), 7 legacy (2015-16)"},
+      "Suezmax": {"count": 13, "avg_dwt": 158500, "notes": "All owned. Mix of 2012 and 2016-17 builds"},
+      "Aframax_LR2": {"count": 5, "avg_dwt": 113000, "notes": "1 LR2 + 4 Aframax. 2 on TC-out"},
+      "LR1": {"count": 11, "avg_dwt": 74200, "notes": "7 in service + 4 newbuilds delivering 2025-2026. Dual-fuel LNG"},
+      "MR": {"count": 28, "avg_dwt": 50200, "notes": "3 agreed to sell. Several on TC-out"}
+    },
+    "fleet_composition_note": "67 vessels as of March 2026 investor deck. Feb 20, 2026 fleet count. 3 MRs agreed to sell."
+  },
+
+  "operating_costs": {
+    "source": "INSW Q4 2025 earnings call, management guidance",
+    "spot_cash_breakeven_per_day": 15000,
+    "expected_2026_breakeven_per_day": 14800,
+    "vessel_opex_per_day_estimate": {
+      "VLCC": 9500,
+      "Suezmax": 8500,
+      "Aframax": 8000,
+      "LR1": 7500,
+      "MR": 7000
+    },
+    "depreciation_quarterly_mm": 41.4,
+    "interest_expense_quarterly_mm": 11.2,
+    "g_and_a_quarterly_mm": 13.0,
+    "total_debt_mm": 576,
+    "cash_mm": 117,
+    "annual_drydock_days_estimate": 300,
+    "notes": "Breakeven of <$15K/day is fleet-wide spot cash breakeven including OPEX, drydock, debt service, and G&A. Net LTV below 13%."
+  },
+
+  "current_rates_crisis_market": {
+    "as_of": "Week of March 23-27, 2026",
+    "source": "Baltic Exchange, S&P Global/Platts, Lloyd's List, Compass Maritime",
+    "VLCC": {
+      "spot_meg_china_td3c": 356500,
+      "spot_waf_china_td15": 130000,
+      "spot_usgc_china_td22": 150500,
+      "one_year_tc": 115000,
+      "crisis_peak_march_3": 519104,
+      "pre_crisis_feb_27": 208000
+    },
+    "Suezmax": {
+      "spot_td20_nigeria_ukc": 215300,
+      "spot_td6_blacksea_med": 344200,
+      "spot_td27_guyana_ukc": 238800,
+      "one_year_tc": 40750,
+      "crisis_peak": 267579,
+      "pre_crisis": 158531
+    },
+    "Aframax": {
+      "spot_td7_cross_ukc": 306750,
+      "spot_td19_cross_med": 293400,
+      "spot_td26_emex_usgc": 373750,
+      "one_year_tc": 31500,
+      "crisis_peak": 373750,
+      "pre_crisis": 95000
+    },
+    "LR1": {
+      "spot_tc16_ara_waf": 69400,
+      "spot_tc5_meg_japan_est": 75000,
+      "one_year_tc": 24000,
+      "pre_crisis": 30000
+    },
+    "MR": {
+      "spot_atlantic_basket": 101200,
+      "spot_tc14_usgc_ukc": 79900,
+      "spot_tc21_usgc_carib": 90200,
+      "one_year_tc": 20000,
+      "pre_crisis": 35000
+    },
+    "baltic_indices": {
+      "BDTI": 3723,
+      "BCTI": 1966,
+      "BDTI_ytd_gain_pct": 182.26,
+      "BCTI_ytd_gain_pct": 159.71
+    }
+  },
+
+  "historical_rates": {
+    "source": "Clarksons, Baltic Exchange, DHT Holdings, TORM, Xclusiv",
+    "VLCC": {
+      "2024_avg": 37500,
+      "2025_avg": 43806,
+      "2024_low": 18000,
+      "2024_high": 160000,
+      "crisis_peak": 519104,
+      "std_dev_normal": 45000,
+      "std_dev_crisis": 125000,
+      "coefficient_of_variation": 0.8
+    },
+    "Suezmax": {
+      "2024_avg": 35500,
+      "2025_avg": 38845,
+      "2024_low": 25000,
+      "2024_high": 158531,
+      "std_dev_normal": 30000
+    },
+    "Aframax": {
+      "2024_avg": 36350,
+      "2025_avg": 31725,
+      "2024_low": 20000,
+      "2024_high": 140000,
+      "std_dev_normal": 25000
+    },
+    "LR1": {
+      "2024_avg": 35000,
+      "2025_avg": 28000,
+      "2024_low": 18000,
+      "2024_high": 55000,
+      "std_dev_normal": 12000
+    },
+    "MR": {
+      "2024_avg": 32000,
+      "2025_avg": 24000,
+      "2024_low": 15000,
+      "2024_high": 45000,
+      "std_dev_normal": 10000
+    }
+  },
+
+  "insw_q4_2025_actuals": {
+    "source": "INSW Q4 2025 earnings, Feb 26, 2026",
+    "revenue_mm": 267.9,
+    "adjusted_net_income_mm": 122,
+    "adjusted_eps": 2.45,
+    "adjusted_ebitda_mm": 175,
+    "dividend_per_share": 2.15,
+    "payout_ratio_pct": 87,
+    "consecutive_quarters_75pct_payout": 6,
+    "q1_2026_book_to_date": {
+      "blended_spot_tce": 50900,
+      "pct_revenue_days_fixed": 71,
+      "notes": "As of earnings call date (Feb 26), pre-Hormuz crisis"
+    }
+  },
+
+  "insw_fy2025_actuals": {
+    "revenue_mm": 843.3,
+    "net_income_mm": 309.3,
+    "eps_diluted": 6.23,
+    "ebitda_mm": 584.6,
+    "dividends_paid_mm": 88.8,
+    "shares_repurchased_mm": 1.9,
+    "total_shareholder_returns_since_2020_mm": 1000
+  },
+
+  "hormuz_crisis_scenarios": {
+    "source": "Polymarket, Metaculus, Goldman Sachs, JPMorgan, Barclays, Morgan Stanley",
+    "current_status": {
+      "days_restricted": 31,
+      "throughput_pct_normal": 5,
+      "ships_per_day": 7,
+      "normal_ships_per_day": 60,
+      "brent_crude_usd": 110.69,
+      "war_risk_premium_pct": 5
+    },
+    "probability_distributions": {
+      "scenario_1_quick_resolution": {
+        "description": "Ceasefire by end of April, traffic normalizes by mid-May",
+        "probability": 0.15,
+        "hormuz_closed_days_total": 60,
+        "avg_vlcc_spot_q2": 150000,
+        "avg_vlcc_spot_q3": 60000,
+        "avg_vlcc_spot_q4": 45000,
+        "brent_avg_2026": 85
+      },
+      "scenario_2_goldman_base": {
+        "description": "6 weeks severe (through late April), 4-week recovery, normalize by June",
+        "probability": 0.30,
+        "hormuz_closed_days_total": 90,
+        "avg_vlcc_spot_q2": 250000,
+        "avg_vlcc_spot_q3": 100000,
+        "avg_vlcc_spot_q4": 55000,
+        "brent_avg_2026": 95
+      },
+      "scenario_3_extended": {
+        "description": "Disruption through May-June, partial recovery Q3",
+        "probability": 0.30,
+        "hormuz_closed_days_total": 150,
+        "avg_vlcc_spot_q2": 300000,
+        "avg_vlcc_spot_q3": 200000,
+        "avg_vlcc_spot_q4": 80000,
+        "brent_avg_2026": 105
+      },
+      "scenario_4_prolonged": {
+        "description": "Disruption through Q3+, ground invasion, Houthi-style persistence",
+        "probability": 0.20,
+        "hormuz_closed_days_total": 270,
+        "avg_vlcc_spot_q2": 350000,
+        "avg_vlcc_spot_q3": 300000,
+        "avg_vlcc_spot_q4": 200000,
+        "brent_avg_2026": 120
+      },
+      "scenario_5_black_swan_reopening": {
+        "description": "Iran capitulates or regime change, rapid normalization",
+        "probability": 0.05,
+        "hormuz_closed_days_total": 40,
+        "avg_vlcc_spot_q2": 80000,
+        "avg_vlcc_spot_q3": 40000,
+        "avg_vlcc_spot_q4": 35000,
+        "brent_avg_2026": 70
+      }
+    },
+    "polymarket_derived": {
+      "p_normal_by_end_april": 0.18,
+      "p_still_disrupted_through_april": 0.82,
+      "p_ceasefire_by_june_30": 0.72,
+      "p_oil_hits_120_before_ceasefire": 0.595,
+      "p_military_action_through_april": 0.65,
+      "p_20plus_ships_one_day_by_april": 0.76,
+      "p_iran_regime_falls_by_june": 0.145,
+      "p_ground_invasion_before_2027": 0.56
+    },
+    "metaculus_derived": {
+      "p_normal_before_april_27": 0.175,
+      "p_ceasefire_before_may": 0.13
+    }
+  },
+
+  "supply_demand_context": {
+    "cape_reroute_impact": {
+      "description": "Cape of Good Hope reroute adds 3000-4000 nm per voyage",
+      "extra_sailing_days": "10-14 per round trip",
+      "effective_fleet_reduction_pct": "15-20% (ton-mile absorption)",
+      "source": "Lloyd's List, Kpler analysis"
+    },
+    "global_tanker_orderbook": {
+      "crude_tanker_orderbook_pct_fleet": 14.1,
+      "aframax_lr2_orderbook_pct_fleet": 40,
+      "source": "BIMCO, AXSMarine, Argus Media",
+      "notes": "9-year high for crude tanker orderbook. But deliveries are 2027-2028+. No new supply for 12+ months."
+    },
+    "sanctioned_fleet_pct": 16,
+    "opec_spare_capacity_bypass": {
+      "saudi_east_west_pipeline_bpd": 7000000,
+      "uae_adcop_bpd": 1500000,
+      "total_bypass_bpd": 9500000,
+      "normal_hormuz_volume_bpd": 20000000,
+      "structurally_irreplaceable_pct": 50
+    },
+    "gulf_storage_exhaustion_days": 25,
+    "notes": "JPMorgan estimates Gulf producers had ~25 days of storage capacity. Already past that threshold as of March 31."
+  },
+
+  "valuation_inputs": {
+    "current_pe": 11.65,
+    "current_ev_ebitda": 6.9,
+    "peers": {
+      "STNG": {"pe": 10.67},
+      "TNK": {"pe": 7.23},
+      "FRO": {"pe": 20.44},
+      "DHT": {"pe": 13.95}
+    },
+    "analyst_consensus": {
+      "rating": "Strong Buy",
+      "analysts_covering": 8,
+      "source": "finance_analyst_research tool"
+    },
+    "short_interest_pct_float": 2.99,
+    "dividend_yield_annualized_pct": 12
+  },
+
+  "monte_carlo_parameters": {
+    "iterations": 10000,
+    "time_horizon": "Q2-Q4 2026 (9 months, ~270 days)",
+    "key_random_variables": [
+      "Hormuz crisis duration (discrete scenarios with assigned probabilities)",
+      "Spot rates by vessel class (lognormal distribution around scenario means, with class-specific volatility)",
+      "Fleet utilization rate (beta distribution, mean 85-92%, higher in crisis)",
+      "TC vs spot mix (currently ~25% TC / 75% spot based on Q4 transcript)",
+      "Oil price (correlated with tanker rates, lognormal)",
+      "Off-hire days (Poisson, ~5-10 days/vessel/year for drydock)",
+      "War risk insurance cost (scenario-dependent)",
+      "Newbuild delivery timing (4 LR1s delivering 2026)"
+    ],
+    "output_variables": [
+      "FY2026 Revenue",
+      "FY2026 Adjusted EBITDA",
+      "FY2026 EPS",
+      "FY2026 Dividend per share",
+      "Implied stock price at various P/E multiples",
+      "Probability of price > $100",
+      "Probability of price > $150",
+      "Expected value (mean stock price)"
+    ]
+  },
+
+  "vessel_level_intelligence": {
+    "source": "aisstream.io API (verified), MyShipTracking, Maritime Optima",
+    "vlcc_positions_as_of": "2026-03-31",
+    "key_findings": {
+      "vlccs_laden": "7/9 (78%)",
+      "vlccs_on_cape_reroute": "5/9",
+      "vlccs_near_hormuz": "0/9",
+      "china_bound": 3,
+      "india_bound": 2,
+      "indonesia_bound": 1,
+      "panama_canal_waiting": 1,
+      "us_west_coast_ballast": 1,
+      "conclusion": "Fleet is 100% avoiding Hormuz, operating at peak utilization on maximally profitable Cape reroute voyages"
+    }
+  }
+}
