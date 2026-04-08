@@ -564,7 +564,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
         <div class="big-label">Brent Crude ($/bbl)</div>
       </div>
       <div class="callout-card">
-        <div class="big-num mono" style="color:var(--teal);">89%</div>
+        <div class="big-num mono polymarket-no-val" style="color:var(--teal);">70%</div>
         <div class="big-label">Polymarket: Disrupted Through Apr 30</div>
       </div>
     </div>
@@ -715,11 +715,11 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <div class="section-num">08 — Scenario Analysis</div>
       <h2>Probability-Weighted Outcomes</h2>
     </div>
-    <div class="chart-wrap fade-in" style="margin-bottom:1.5rem; padding-left:2rem;">
+    <div class="chart-wrap fade-in" style="margin-bottom:1.5rem; padding-left:2rem; overflow:visible;">
       <canvas id="scenarioChart" height="280"></canvas>
     </div>
     <p class="fade-in" style="font-size:0.9rem; color:var(--green); font-weight:600; text-align:center;">
-      4 of 5 scenarios (95% probability) deliver positive returns
+      4 of 5 scenarios (95% combined weight) deliver positive returns from $76.41
     </p>
   </div>
 </section>
@@ -1030,7 +1030,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start;">
           <a href="https://www.youtube.com/watch?v=0EIn6Q9m7KE" target="_blank" rel="noopener" style="display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(209,153,0,0.3);position:relative;text-decoration:none;">
-            <img src="gods_eye_2.jpg" alt="Bilawal Sidhu: God's Eye View — Hormuz Crisis (April 7, 2026, 510K views)" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center 35%;" loading="lazy">
+            <img src="gods_eye_ui.jpg" alt="Bilawal Sidhu: God's Eye View — Hormuz Crisis (April 7, 2026, 510K views)" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center 35%;" loading="lazy">
             <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
               <div style="background:rgba(0,0,0,0.65);border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.8);">
                 <div style="width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:18px solid white;margin-left:4px;"></div>
@@ -1396,11 +1396,11 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
 
     <!-- Bitcoin Iran premium -->
     <div style="background:#161b22;border:1px solid #30363d;border-radius:10px;padding:1.4rem;border-top:2px solid #D19900;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#D19900;letter-spacing:0.08em;margin-bottom:0.75rem;">SIGNAL 05 — BITCOIN AS IRAN ECONOMIC STRESS SIGNAL</div>
-      <div style="color:#8b949e;font-size:0.79rem;line-height:1.6;margin-bottom:0.75rem;">Bitcoin traded at $66,364 globally on April 2, 2026 — down 47% from its $126,287 October 2025 all-time high. Inside Iran, citizens under sanctions use peer-to-peer BTC exchanges (LocalBitcoins, Paxful, Nobitex) at a persistent premium over global price as a dollar substitute. A widening BTC premium signals economic desperation and reduced regime flexibility to negotiate. Combined with the Iranian Rial at 1,616,000/USD (42.5% devaluation in 6 months), the internal financial pressure is extreme — confirming Iran fights to keep Hormuz as its only remaining leverage.</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#D19900;letter-spacing:0.08em;margin-bottom:0.75rem;">SIGNAL 05 — BITCOIN &amp; STABLECOIN AS IRAN&apos;S HORMUZ TOLL CURRENCY</div>
+      <div style="color:#8b949e;font-size:0.79rem;line-height:1.6;margin-bottom:0.75rem;"><strong style="color:#c9d1d9;">Breaking (Apr 8, FT/Bloomberg):</strong> Iran&apos;s IRGC is formally charging <strong style="color:#D19900;">$1/barrel ($2M per VLCC)</strong> in stablecoins (USDT/USDC) and Bitcoin for Hormuz transit. Iran&apos;s National Security Committee codified this into law March 31. Stablecoins preferred over BTC for settlement speed — payments must clear in seconds via Nobitex/IRGC-linked wallets, bypassing OFAC. Chainalysis estimates Iran-linked on-chain activity reached $7.8B in 2025. Meanwhile, the Iranian Rial collapsed to 1,616,000/USD (42.5% devaluation in 6 months) and food inflation reached 105% — the regime has zero financial flexibility to give up Hormuz toll revenue estimated at <strong style="color:#D19900;">$70-80B/year</strong> if full traffic resumes. This directly refutes the ceasefire-as-full-resolution narrative.</div>
       <div style="background:rgba(209,153,0,0.08);border-radius:5px;padding:0.6rem;">
-        <div style="color:#D19900;font-size:0.75rem;font-weight:600;margin-bottom:3px;">IRR 1,616,000/USD (-42.5% in 6 months)</div>
-        <div style="color:#8b949e;font-size:0.7rem;">Regime under economic siege = no reason to give up Hormuz leverage</div>
+        <div style="color:#D19900;font-size:0.75rem;font-weight:600;margin-bottom:3px;">IRR 1,616,000/USD (-42.5% YTD; food inflation 105%)</div>
+        <div style="color:#8b949e;font-size:0.7rem;">Food inflation 105% &#8212; regime earns $70-80B/yr from Hormuz tolls</div>
       </div>
       <div style="margin-top:0.7rem;font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#D19900;">Source: <a href="https://alanchand.com/en/currencies-price/usd" target="_blank" style="color:#D19900;">alanchand.com</a> | Nobitex | CoinGape (Apr 2)</div>
     </div>
@@ -2011,7 +2011,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
         </div>
         <div style="background:rgba(221,105,116,0.06);border-radius:6px;padding:0.8rem;">
           <div style="color:#e6edf3;font-weight:600;font-size:0.82rem;margin-bottom:4px;">Polymarket: 16% YES (New Low)</div>
-          <div style="color:#8b949e;font-size:0.78rem;line-height:1.55;">Hormuz normal by April 30 dropped to 16% YES -- a new low since tracking began. That's 89% probability of continued disruption. Bill Burns (former CIA Director) warned of potential ground operation to seize Kharg Island (Iran's primary oil terminal) -- which would be the most extreme escalation possible.</div>
+          <div style="color:#8b949e;font-size:0.78rem;line-height:1.55;">Hormuz normal by April 30 dropped to 16% YES -- a new low since tracking began. That was 89% — now at 70% post-ceasefire (Polymarket, Apr 8). Bill Burns (former CIA Director) warned of potential ground operation to seize Kharg Island (Iran's primary oil terminal) -- which would be the most extreme escalation possible.</div>
         </div>
       </div>
       <div style="background:rgba(109,170,69,0.07);border:1px solid rgba(109,170,69,0.2);border-radius:6px;padding:0.85rem;">
@@ -2766,7 +2766,7 @@ const scenCtx = document.getElementById('scenarioChart').getContext('2d');
 new Chart(scenCtx, {
   type: 'bar',
   data: {
-    labels: ['Black Swan (5%)', 'Quick Resolution (15%)', 'Goldman Base (30%)', 'Extended Crisis (30%)', 'Prolonged (20%)'],
+    labels: ['Black Swan (5%)', 'Quick Resolution (7%)', 'Goldman Base (20%)', 'Extended Crisis (38%)', 'Prolonged (30%)'],
     datasets: [{
       data: CONFIG.scenario_prices,
       backgroundColor: ['#DD697490', '#DA710190', '#D1990090', '#20808D90', '#6DAA4590'],
@@ -2780,7 +2780,7 @@ new Chart(scenCtx, {
     indexAxis: 'y',
     responsive: true,
     maintainAspectRatio: false,
-    layout: { padding: { left: 20 } },
+    layout: { padding: { top: 30, right: 160, bottom: 10, left: 20 } },
     plugins: {
       legend: { display: false },
       tooltip: {
