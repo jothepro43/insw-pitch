@@ -2342,7 +2342,6 @@ const CONFIG = {
 
 // Apply CONFIG values to DOM immediately on load
 function applyConfig() {
-  try {
   // Hero stat counters
   const stats = document.querySelectorAll('.hero-stat .value');
   if (stats[0]) stats[0].dataset.target = CONFIG.mc_mean_target;
@@ -2424,10 +2423,6 @@ function applyConfig() {
   document.querySelectorAll('.div-per-share-val').forEach(el => {
     el.textContent = '$' + CONFIG.mc_mean_dividend + '/share';
   });
-}
-  } catch(e) {
-    console.error('applyConfig error:', e);
-  }
 }
 
 document.addEventListener('DOMContentLoaded', applyConfig);

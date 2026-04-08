@@ -1,1 +1,1 @@
-{"branch":"run/2026-04-08-2322","note":"hotfix: CONFIG block corruption repaired, hero rendering restored"}
+{"branch":"run/2026-04-08-2329","note":"hotfix: removed orphaned try/catch braces from applyConfig, hero fully restored"}
