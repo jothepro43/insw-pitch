@@ -475,24 +475,24 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
 
     <div class="hero-stats fade-in">
       <div class="hero-stat">
-        <div class="value" data-target="119" data-prefix="$">$0</div>
+        <div class="value" data-target="174" data-prefix="$">$0</div>
         <div class="label">Mean Price Target</div>
         <div class="sublabel">+140% upside</div>
       </div>
       <div class="hero-stat">
-        <div class="value" data-target="65.1" data-suffix="%" data-decimals="1">0%</div>
+        <div class="value" data-target="92.7" data-suffix="%" data-decimals="1">0%</div>
         <div class="label">Probability of Profit</div>
         <div class="sublabel">Monte Carlo (ceasefire update)</div>
       </div>
       <div class="hero-stat">
-        <div class="value" data-target="17.5" data-suffix="%" data-decimals="1">0%</div>
+        <div class="value" data-target="25.5" data-suffix="%" data-decimals="1">0%</div>
         <div class="label">Expected Dividend Yield</div>
         <div class="sublabel"><span class="div-per-share-val">$12.95/share FY2026E</span></div>
       </div>
     </div>
 
     <p class="hero-footnote fade-in mono">
-      10,000-iteration Monte Carlo simulation &nbsp;|&nbsp; 27+ data sources &nbsp;|&nbsp; April 7, 2026
+      10,000-iteration Monte Carlo simulation &nbsp;|&nbsp; 27+ data sources &nbsp;|&nbsp; April 8, 2026
     </p>
   </div>
 </section>
@@ -504,7 +504,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <div class="section-num">02 — Thesis</div>
       <h2>Investment Thesis</h2>
       <p class="thesis-text">
-        International Seaways operates 67 oil tankers across all five vessel classes — the most diversified fleet in the industry. With a fleet-wide breakeven of $15,000/day and current spot rates between $200,000–$356,000/day driven by the Strait of Hormuz crisis, INSW is printing extraordinary earnings the market hasn't priced. At 11.59x trailing P/E on depressed FY2025 earnings of $6.23, the stock trades as if the crisis doesn't exist. Our 10,000-iteration Monte Carlo model projects mean FY2026 EPS of $14.89, implying a fair value of $119.11 at 8x earnings — 112% upside.
+        International Seaways operates 67 oil tankers across all five vessel classes — the most diversified fleet in the industry. With a fleet-wide breakeven of $15,000/day and current spot rates between $200,000–$356,000/day driven by the Strait of Hormuz crisis, INSW is printing extraordinary earnings the market hasn't priced. At 11.59x trailing P/E on depressed FY2025 earnings of $6.23, the stock trades as if the crisis doesn't exist. Our 10,000-iteration Monte Carlo model projects mean FY2026 EPS of $21.77, implying a fair value of $174 at 8x earnings — 140% upside.
       </p>
     </div>
     <div class="card-grid card-grid-6 fade-in">
@@ -522,7 +522,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       </div>
       <div class="metric-card">
         <div class="card-label">FY2026E EPS</div>
-        <div class="card-value mono green">$14.89</div>
+        <div class="card-value mono green">$21.77</div>
       </div>
       <div class="metric-card">
         <div class="card-label">Breakeven</div>
@@ -2284,13 +2284,13 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
 // The scheduled task writes to this block; everything else reads from it
 // ══════════════════════════════════════════════════════════
 const CONFIG = {
-  // Live market data
+  // Live market data (updated by monitor every run)
   insw_price:          76.41,
-  insw_change_pct:     3.72,     // after-hours % change
+  insw_change_pct:     3.72,
   brent:               96.67,
-  polymarket_yes_pct:  30,        // Hormuz normal by Apr 30
+  polymarket_yes_pct:  30,
 
-  // Monte Carlo results (re-run on material Polymarket shifts)
+  // Monte Carlo results (re-run when Polymarket shifts >5pts)
   mc_mean_target:      174,
   mc_upside_pct:       140,
   mc_p_profit:         92.7,
@@ -2298,21 +2298,21 @@ const CONFIG = {
   mc_mean_dividend:    18.51,
   mc_mean_eps:         21.77,
 
-  // Monte Carlo percentile table [eps, price@8x, vs_current_pct]
-  mc_p5:   [7.75, 62, -19], 61, -16],  39,  -47],
-  mc_p10:  [10.33, 83, 9], 78, 8],  44,  -41],
-  mc_p25:  [14.99, 120, 57], 109, 51],  57,  -23],
-  mc_p50:  [20.92, 167, 119], 156, 116], 103,  39],
-  mc_p75:  [28.06, 225, 195], 213, 196], 159, 115],
-  mc_p90:  [34.37, 275, 260], 265, 268], 227, 207],
-  mc_p95:  [37.79, 302, 296], 295, 309], 267, 261],
+  // Percentile table [eps, price@8x, vs_current_pct]
+  mc_p5:   [7.75, 62, -19],
+  mc_p10:  [10.33, 83, 9],
+  mc_p25:  [14.99, 120, 57],
+  mc_p50:  [20.92, 167, 119],
+  mc_p75:  [28.06, 225, 195],
+  mc_p90:  [34.37, 275, 260],
+  mc_p95:  [37.79, 302, 296],
 
-  // Scenario chart (price targets at 8x P/E)
-  scenario_prices: [75, 125, 192, 250, 50], 130, 190, 240, 50], 73, 111, 166, 256],   // Black Swan, Quick Resol, Goldman, Extended, Prolonged
-  scenario_probs:  ['7%', '20%', '38%', '30%', '5%'], '25%', '35%', '25%', '5%'], '35%', '30%', '22%', '13%'],
+  // Scenario chart
+  scenario_prices: [75, 125, 192, 250, 50],
+  scenario_probs:  ['7%', '20%', '38%', '30%', '5%'],
 
-  // Hormuz crisis stats
-  hormuz_throughput_pct: 62,    // "~30%" or "62%" — set to 62 for ceasefire/coordination phase
+  // Hormuz crisis
+  hormuz_throughput_pct: 62,
   hormuz_ships_normal:   60,
   hormuz_status_label:   'Ceasefire — Reopening',
 
@@ -2321,27 +2321,28 @@ const CONFIG = {
 
   // Peer comps
   peers: {
-    STNG: {'price':76.81}, pe: 10.54 },
-    FRO:  {'price':36.15}, pe: 20.49 },
-    DHT:  {'price':18.35}, pe: 13.82 },
-    TNK:  {'price':77.04}, pe: 7.22  },
+    STNG: { price: 76.81, pe: 10.54 },
+    FRO:  { price: 36.15, pe: 20.49 },
+    DHT:  { price: 18.35, pe: 13.82 },
+    TNK:  { price: 77.04, pe: 7.22  },
     NAT:  { price: 5.95,  pe: 95.5  },
     HAFN: { price: 7.99,  pe: 11.40 },
     TRMD: { price: 29.39, pe: 9.83  },
   },
 
-  // Key dates
-  as_of_date:       'April 8, 2026', 2026', 2026', 2026',
-  insw_earnings:    'May 7, 2026',
+  // Dates
+  as_of_date:    'April 8, 2026',
+  insw_earnings: 'May 7, 2026',
 
   // Banner
-  banner_text: 'APR 8 5PM: Ceasefire fragile — explosions near Lavan refinery. INSW +3.7% as sector prices extended crisis. Polymarket 30% YES.',
-  banner_date: 'APR 8, 2026', 2026', 2026', 2026',
+  banner_text: 'APR 8 5PM: Ceasefire fragile \u2014 explosions near Lavan refinery. INSW +3.7% as sector prices extended crisis. Polymarket 30% YES.',
+  banner_date: 'APR 8, 2026',
 };
 // ── END CONFIG ─────────────────────────────────────────────────
 
 // Apply CONFIG values to DOM immediately on load
 function applyConfig() {
+  try {
   // Hero stat counters
   const stats = document.querySelectorAll('.hero-stat .value');
   if (stats[0]) stats[0].dataset.target = CONFIG.mc_mean_target;
@@ -2423,6 +2424,10 @@ function applyConfig() {
   document.querySelectorAll('.div-per-share-val').forEach(el => {
     el.textContent = '$' + CONFIG.mc_mean_dividend + '/share';
   });
+}
+  } catch(e) {
+    console.error('applyConfig error:', e);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', applyConfig);
