@@ -715,7 +715,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <div class="section-num">08 — Scenario Analysis</div>
       <h2>Probability-Weighted Outcomes</h2>
     </div>
-    <div class="chart-wrap fade-in" style="margin-bottom:1.5rem; padding-left:2rem; overflow:visible;">
+    <div class="chart-wrap fade-in" style="margin-bottom:1.5rem; overflow:visible;">
       <canvas id="scenarioChart" height="280"></canvas>
     </div>
     <p class="fade-in" style="font-size:0.9rem; color:var(--green); font-weight:600; text-align:center;">
@@ -1030,7 +1030,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start;">
           <a href="https://www.youtube.com/watch?v=0EIn6Q9m7KE" target="_blank" rel="noopener" style="display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(209,153,0,0.3);position:relative;text-decoration:none;">
-            <img src="gods_eye_ui.jpg" alt="Bilawal Sidhu: God's Eye View — Hormuz Crisis (April 7, 2026, 510K views)" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center 35%;" loading="lazy">
+            <img src="gods_eye_1.jpg" alt="Bilawal Sidhu: God's Eye View — Hormuz Crisis (April 7, 2026, 510K views)" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center 35%;" loading="lazy">
             <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
               <div style="background:rgba(0,0,0,0.65);border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.8);">
                 <div style="width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:18px solid white;margin-left:4px;"></div>
@@ -1089,7 +1089,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
           <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#D19900;letter-spacing:0.08em;">OSINT METHODOLOGY — BILAWAL SIDHU GOD'S EYE VIEW</span>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start;">
-          <div>
+          <div style="line-height:0;font-size:0;">
             <a href="https://www.youtube.com/watch?v=ccZzOGnT4Cg" target="_blank" rel="noopener" style="display:block;border-radius:8px;overflow:hidden;border:1px solid rgba(209,153,0,0.3);position:relative;text-decoration:none;">
               <img src="gods_eye_ui.jpg" alt="God's Eye View platform UI — actual Strait of Hormuz ship tracking visualization showing -92.2% transit collapse, AIS ship tracks, oil price charts, and real-time data overlays — Iran's Secret Toll Booth (April 7, 2026)" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;object-position:center 35%;" loading="lazy">
               <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
@@ -2780,7 +2780,7 @@ new Chart(scenCtx, {
     indexAxis: 'y',
     responsive: true,
     maintainAspectRatio: false,
-    layout: { padding: { top: 30, right: 160, bottom: 10, left: 20 } },
+    layout: { padding: { top: 30, right: 180, bottom: 10, left: 0 } },
     plugins: {
       legend: { display: false },
       tooltip: {
@@ -2798,6 +2798,7 @@ new Chart(scenCtx, {
       },
       y: {
         grid: { display: false },
+        afterFit(scale) { scale.width = 185; },
         ticks: {
           color: '#c9d1d9',
           font: { family: 'JetBrains Mono', size: 10 },
