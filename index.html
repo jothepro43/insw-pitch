@@ -446,12 +446,17 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <li><a href="#hero">Thesis</a></li>
       <li><a href="#crisis">Crisis</a></li>
       <li><a href="#map">Fleet</a></li>
+      <li><a href="#osint" style="color:#5591C7">OSINT</a></li>
+      <li><a href="#surveillance" style="color:#20808D">INTEL</a></li>
+      <li><a href="#altdata" style="color:#D19900">ALT DATA</a></li>
       <li><a href="#rates">Rates</a></li>
       <li><a href="#comps">Comps</a></li>
       <li><a href="#monte-carlo">Model</a></li>
       <li><a href="#scenarios">Scenarios</a></li>
       <li><a href="#risks">Risks</a></li>
-      <li><a href="#osint" style="color:#5591C7">OSINT</a> <a href="#surveillance" style="color:#20808D">INTEL</a> <a href="#altdata" style="color:#D19900">ALT DATA</a> <a href="#latest" style="color:#DD6974">LATEST</a> <a href="#conclusion">Conclusion</a> <a href="#version-history" style="color:#20808D;">HISTORY</a></li>
+      <li><a href="#latest" style="color:#DD6974">LATEST</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#version-history" style="color:#20808D;">HISTORY</a></li>
     </ul>
   </div>
 </nav><div style="background:rgba(32,128,141,0.15);border-bottom:1px solid rgba(32,128,141,0.4);padding:9px 24px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:#c9d1d9;">
@@ -477,7 +482,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <div class="hero-stat">
         <div class="value" data-target="174" data-prefix="$">$0</div>
         <div class="label">Mean Price Target</div>
-        <div class="sublabel">+140% upside</div>
+        <div class="sublabel">+128% upside</div>
       </div>
       <div class="hero-stat">
         <div class="value" data-target="92.7" data-suffix="%" data-decimals="1">0%</div>
@@ -504,7 +509,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
       <div class="section-num">02 — Thesis</div>
       <h2>Investment Thesis</h2>
       <p class="thesis-text">
-        International Seaways operates 67 oil tankers across all five vessel classes — the most diversified fleet in the industry. With a fleet-wide breakeven of $15,000/day and current spot rates between $200,000–$356,000/day driven by the Strait of Hormuz crisis, INSW is printing extraordinary earnings the market hasn't priced. At 10.2x trailing P/E on depressed FY2025 earnings of $6.23, the stock trades as if the crisis doesn't exist. Our 10,000-iteration Monte Carlo model projects mean FY2026 EPS of <strong>$21.77</strong>, implying a fair value of <strong>$174</strong> at 8x earnings &mdash; <strong>+140% upside</strong>.
+        International Seaways operates 67 oil tankers across all five vessel classes — the most diversified fleet in the industry. With a fleet-wide breakeven of $15,000/day and current spot rates between $200,000–$356,000/day driven by the Strait of Hormuz crisis, INSW is printing extraordinary earnings the market hasn't priced. At 10.2x trailing P/E on depressed FY2025 earnings of $6.23, the stock trades as if the crisis doesn't exist. Our 10,000-iteration Monte Carlo model projects mean FY2026 EPS of <strong>$21.77</strong>, implying a fair value of <strong>$174</strong> at 8x earnings &mdash; <strong>+128% upside</strong>.
       </p>
     </div>
     <div class="card-grid card-grid-6 fade-in">
@@ -618,375 +623,13 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
   </div>
 </section>
 
-<!-- ═══════════════ SECTION 5: TANKER RATES ═══════════════ -->
-<section id="rates">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-num">05 — Market Data</div>
-      <h2>Tanker Rate Explosion</h2>
-    </div>
-    <div class="chart-wrap fade-in">
-      <canvas id="ratesChart" height="360"></canvas>
-    </div>
-    <p class="source-cite fade-in">Source: Baltic Exchange, S&P Global/Platts, Lloyd's List</p>
-  </div>
-</section>
-
-<!-- ═══════════════ SECTION 6: COMPETITIVE LANDSCAPE ═══════════════ -->
-<section id="comps">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-num">06 — Competitive Landscape</div>
-      <h2>INSW vs. Tanker Peers</h2>
-    </div>
-    <div class="data-table-wrap fade-in">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Ticker</th>
-            <th>Price</th>
-            <th>Mkt Cap</th>
-            <th>P/E</th>
-            <th>Div Yield</th>
-            <th class="text-col">Fleet Focus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="highlight">
-            <td>INSW</td><td>~$70.83</td><td>$3.6B</td><td>10.2x</td><td>6%</td>
-            <td class="text-col" style="font-family:'Inter',sans-serif;">Diversified: ALL 5 classes</td>
-          </tr>
-          <tr><td>STNG</td><td>$74.36</td><td>$3.8B</td><td>10.54x</td><td>2%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: MR+LR2 only</td></tr>
-          <tr><td>FRO</td><td>$34.98</td><td>$7.8B</td><td>20.49x</td><td>Reopening</td><td class="text-col" style="font-family:'Inter',sans-serif;">Crude: VLCC+Suez</td></tr>
-          <tr><td>DHT</td><td>$17.59</td><td>$2.9B</td><td>13.82x</td><td>Reopening</td><td class="text-col" style="font-family:'Inter',sans-serif;">Pure VLCC</td></tr>
-          <tr><td>TNK</td><td>$75.82</td><td>$2.5B</td><td>7.22x</td><td>3%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Suez+Afra+LR2</td></tr>
-          <tr><td>ASC</td><td>$15.22</td><td>$47.191M</td><td>17.30x</td><td>2%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: MR+Chemical</td></tr>
-          <tr><td>NAT</td><td>$4.925</td><td>$1.2B</td><td>95.50x</td><td>8%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Pure Suezmax</td></tr>
-          <tr><td>HAFN</td><td>$7.99</td><td>$3.8B</td><td>11.40x</td><td>7%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: LR1+LR2+MR</td></tr>
-          <tr><td>TRMD</td><td>$29.39</td><td>$2.9B</td><td>9.83x</td><td>7%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: LR2+MR</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="fade-in" style="margin-top:1rem; font-size:0.85rem; color:var(--teal); font-weight:600;">
-      INSW is the ONLY tanker company with significant presence in ALL 5 vessel classes (VLCC, Suezmax, Aframax, LR1, MR)
-    </p>
-    <p class="source-cite fade-in">Source: PitchBook, SEC EDGAR, Perplexity Finance — <span class="as-of-date">as of April 8, 2026</span></p>
-  </div>
-</section>
-
-<!-- ═══════════════ SECTION 7: MONTE CARLO ═══════════════ -->
-<section id="monte-carlo">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-num">07 — Quantitative Model</div>
-      <h2>Monte Carlo Simulation</h2>
-      <p style="font-size:0.88rem; color:var(--text-muted); max-width:800px; line-height:1.7; margin-bottom:2rem;">
-        10,000 iterations across 5 Hormuz scenarios calibrated with Polymarket probabilities. Tanker rates modeled as Cholesky-correlated lognormal distributions across all 5 vessel classes. Fleet economics derived from INSW's 10-K filing and Q4 2025 earnings call.
-      </p>
-    </div>
-    <div class="chart-wrap fade-in" style="margin-bottom:2rem;">
-      <canvas id="epsHistogram" height="300"></canvas>
-    </div>
-    <div class="fade-in">
-      <h3 style="margin-bottom:0.5rem;">Percentile Distribution</h3>
-      <div class="data-table-wrap">
-        <table class="data-table">
-          <thead>
-            <tr><th>Percentile</th><th>EPS</th><th>Price @ 8x P/E</th><th class="mc-current-header">vs. Current ($74.00)</th></tr>
-          </thead>
-          <tbody>
-            <tr class="mc-percentile-row"><td>5th</td><td>$5.9</td><td>$39.38</td><td style="color:var(--red);">-47%</td></tr>
-            <tr class="mc-percentile-row"><td>25th</td><td>$7.16</td><td>$57.27</td><td style="color:var(--green);">-23%</td></tr>
-            <tr class="mc-percentile-row"><td>50th (Median)</td><td>$12.86</td><td>$102.86</td><td style="color:var(--green);">+39%</td></tr>
-            <tr style="background:rgba(32,128,141,0.08);"><td style="color:var(--teal);font-weight:700;">Mean</td><td style="color:var(--teal);font-weight:700;">$21.77</td><td style="color:var(--teal);font-weight:700;">$174</td><td style="color:var(--teal);font-weight:700;">+140%</td></tr>
-            <tr class="mc-percentile-row"><td>75th</td><td>$19.92</td><td>$159.37</td><td style="color:var(--green);">+115%</td></tr>
-            <tr class="mc-percentile-row"><td>95th</td><td>$33.36</td><td>$266.86</td><td style="color:var(--green);">+261%</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ SECTION 8: SCENARIO ANALYSIS ═══════════════ -->
-<section id="scenarios">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-num">08 — Scenario Analysis</div>
-      <h2>Probability-Weighted Outcomes</h2>
-    </div>
-    <div class="chart-wrap fade-in" style="margin-bottom:1.5rem; overflow:visible;">
-      <canvas id="scenarioChart" height="280"></canvas>
-    </div>
-    <p class="fade-in" style="font-size:0.9rem; color:var(--green); font-weight:600; text-align:center;">
-      4 of 5 scenarios (95% combined weight) deliver positive returns from $76.41
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════════ SECTION 9: PROBABILITY TABLE ═══════════════ -->
-<section id="probability">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-num">09 — Probability Analysis</div>
-      <h2>Upside Probabilities</h2>
-    </div>
-    <div class="card-grid card-grid-3 fade-in" style="margin-bottom:2rem;">
-      <div class="prob-card">
-        <div class="prob-value mono prob-card-main" style="color:var(--green);">92.7%</div>
-        <div class="prob-label">stock &gt; $76 <span style="color:var(--text-muted);">(current)</span></div>
-      </div>
-      <div class="prob-card">
-        <div class="prob-value mono" style="color:var(--teal);">83.9%</div>
-        <div class="prob-label">stock &gt; $100</div>
-      </div>
-      <div class="prob-card">
-        <div class="prob-value mono" style="color:var(--gold);">59%</div>
-        <div class="prob-label">stock &gt; $150</div>
-      </div>
-    </div>
-    <div class="prediction-box fade-in">
-      <h4>Prediction Market Calibration</h4>
-      <div class="pred-item">
-        <span>Polymarket: Hormuz normal by Apr 30 (YES)</span>
-        <span class="pred-val" style="color:var(--gold);">37%</span>
-      </div>
-      <div class="pred-item">
-        <span>Metaculus: Hormuz normal before April 27</span>
-        <span class="pred-val" style="color:var(--green);">38%</span>
-      </div>
-      <div class="pred-item">
-        <span>Brent crude (ceasefire sell-off)</span>
-        <span class="pred-val" style="color:var(--red);">$94.82</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ SECTION 10: KEY RISKS ═══════════════ -->
-<section id="risks">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-num">10 — Risk Assessment</div>
-      <h2>Key Risks & Counters</h2>
-    </div>
-    <div class="risk-grid fade-in">
-      <div class="risk-item">
-        <div>
-          <div class="risk-title">Sudden Ceasefire</div>
-          <p>Iran capitulates or regime change normalizes traffic within weeks, collapsing rates.</p>
-        </div>
-        <div>
-          <div class="counter-title">Counter</div>
-          <p>Only 5% scenario probability per Polymarket. Even Quick Resolution scenario yields $73 stock price (-3%). Rates were already elevated pre-crisis due to sanctions on Russia/Iran dark fleet.</p>
-        </div>
-      </div>
-      <div class="risk-item">
-        <div>
-          <div class="risk-title">Rate Normalization</div>
-          <p>Tanker rates revert to 2024 averages ($37K VLCC) as crisis fades and fleet supply grows.</p>
-        </div>
-        <div>
-          <div class="counter-title">Counter</div>
-          <p>Orderbook deliveries are 2027-2028+. No new supply for 12+ months. Sanctioned fleet (16% of capacity) remains permanently dislocated. Cape reroutes absorb 15-20% of effective fleet.</p>
-        </div>
-      </div>
-      <div class="risk-item">
-        <div>
-          <div class="risk-title">Global Recession</div>
-          <p>Oil demand destruction from economic downturn reduces tanker demand fundamentally.</p>
-        </div>
-        <div>
-          <div class="counter-title">Counter</div>
-          <p>Even in recessions, oil still moves. 2008-09 VLCC rates stayed above $30K/day. INSW breakeven is $15K/day — wide margin of safety. Geopolitical premium persists regardless of demand cycle.</p>
-        </div>
-      </div>
-      <div class="risk-item">
-        <div>
-          <div class="risk-title">Vessel Damage / War Risk</div>
-          <p>INSW vessel struck by missile or mine near conflict zone, causing losses and insurance spikes.</p>
-        </div>
-        <div>
-          <div class="counter-title">Counter</div>
-          <p>0/9 VLCCs near Hormuz. Fleet is operating in safe waters (Cape, Malacca, Atlantic). War risk insurance is a cost but currently passed through to charterers at premium rates.</p>
-        </div>
-      </div>
-      <div class="risk-item risk-item-full">
-        <div>
-          <div class="risk-title">Cyclical Multiple Compression</div>
-          <p>Market refuses to apply higher P/E to cyclical peak earnings, capping stock upside.</p>
-        </div>
-        <div>
-          <div class="counter-title">Counter</div>
-          <p>We use a conservative 8x P/E — below the peer average of 11-13x. Even at 6x, the mean price target is $115 (+59% upside). The 26.1% dividend yield provides return floor independent of multiple.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ SECTION 11: DATA SOURCES ═══════════════ -->
-<section id="sources">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-num">11 — Methodology</div>
-      <h2>Data Sources & Methodology</h2>
-    </div>
-    <div class="source-grid fade-in" style="margin-bottom:2rem;">
-      <a class="source-tag" href="https://aisstream.io" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">aisstream.io</a>
-      <a class="source-tag" href="https://www.balticexchange.com/en/data/market-data.html" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Baltic Exchange</a>
-      <a class="source-tag" href="https://www.spglobal.com/commodityinsights/en/market-insights/latest-news/oil" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">S&P Global / Platts</a>
-      <a class="source-tag" href="https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-april-30" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Polymarket</a>
-      <a class="source-tag" href="https://www.metaculus.com/questions/42729/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Metaculus</a>
-      <a class="source-tag" href="https://www.sec.gov/Archives/edgar/data/1679049/000110465926020113/0001104659-26-020113-index.htm" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">SEC EDGAR</a>
-      <a class="source-tag" href="https://www.myshiptracking.com/vessels?name=seaways" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">MyShipTracking</a>
-      <a class="source-tag" href="https://maritimeoptima.com" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Maritime Optima</a>
-      <a class="source-tag" href="https://lloydslist.com" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Lloyd's List</a>
-      <a class="source-tag" href="https://www.thestreet.com/investing/goldman-sachs-reset-oil-price-forecast-for-the-rest-of-2026" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Goldman Sachs</a>
-      <a class="source-tag" href="https://www.jpmorgan.com/insights/global-research/commodities" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">JPMorgan</a>
-      <a class="source-tag" href="https://www.investmentbank.barclays.com/our-insights.html" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Barclays</a>
-      <a class="source-tag" href="https://www.morganstanley.com/ideas/energy-commodities" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Morgan Stanley</a>
-      <a class="source-tag" href="https://www.statista.com/topics/1690/tanker-shipping/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Statista (Premium)</a>
-      <a class="source-tag" href="https://pitchbook.com/search?q=International+Seaways" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">PitchBook</a>
-      <a class="source-tag" href="https://github.com/jothepro43/insw-pitch" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;border-color:rgba(32,128,141,0.7);color:#20808D;">GitHub: insw-pitch</a>
-      <a class="source-tag" href="https://www.cbinsights.com/research/maritime-shipping-technology/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">CB Insights</a>
-      <a class="source-tag" href="https://www.perplexity.ai/finance/INSW" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Perplexity Finance</a>
-      <a class="source-tag" href="https://www.perplexity.ai/computer" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Perplexity Computer</a>
-      <a class="source-tag" href="https://www.clarksons.com/shipping-services/market-intelligence/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Clarksons Research</a>
-      <a class="source-tag" href="https://www.compassmaritime.com/tanker-market-insight/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Compass Maritime</a>
-      <a class="source-tag" href="https://www.bimco.org/shipping-information/markets" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">BIMCO / AXSMarine</a>
-    </div>
-    <div class="fade-in">
-      <h3>Methodology</h3>
-      <ul style="list-style:none;padding:0;margin:0;">
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">AIS vessel tracking via aisstream.io WebSocket API</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Real-time VLCC positions verified against MyShipTracking and Maritime Optima. MMSI numbers resolved for all 67 vessels. OSINT methodology cross-validated against Bilawal Sidhu's God's Eye View (ex-Google PM / a16z), which independently confirmed the -92.2% transit collapse and IRGC toll booth corridor.</p>
-        <a href="https://aisstream.io" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: aisstream.io &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">10,000-iteration Monte Carlo with Cholesky-correlated rate distributions</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">5 Hormuz scenarios weighted by Polymarket probabilities. Lognormal rate distributions calibrated to 2024-2026 Baltic Exchange volatility. 62 vessels modeled individually (51 spot + 11 TC-out). Beta-distributed utilization, Poisson off-hire days. 3% effective tax rate (Marshall Islands, Section 883).</p>
-        <a href="https://www.balticexchange.com/en/data/market-data.html" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Baltic Exchange BDTI/BCTI &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">Prediction market calibration using Polymarket and Metaculus</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Polymarket: 62% YES for Hormuz normal by April 30 ($3.4M volume). Metaculus community: 15-20% probability. Used to set scenario probability weights in Monte Carlo. Polymarket's $3.4M volume makes it the most liquid real-money geopolitical forecasting market on this event.</p>
-        <a href="https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-april-30" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Polymarket — Hormuz Market &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">Fleet economics from INSW 10-K (SEC EDGAR) and Q4 2025 earnings transcript</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">OPEX rates by vessel class, $14,800/day spot cash breakeven, TC-out vessel rates, fixed quarterly costs (D&A $41.4M, interest $11.2M, G&A $13.0M). Diluted shares outstanding 49,595,945. 87% dividend payout policy (6 consecutive quarters). $724M liquidity, 13% net LTV.</p>
-        <a href="https://www.sec.gov/Archives/edgar/data/1679049/000110465926020113/0001104659-26-020113-index.htm" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: SEC EDGAR — INSW 10-K &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">Competitive landscape from PitchBook, CB Insights, and Perplexity Finance</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">PitchBook: INSW company profile, competitor ranking (DHT #1, Frontline #5). CB Insights: maritime industry research, 90% of global trade by sea. Perplexity Finance: live quotes and analyst ratings for all 9 tanker peers. Deutsche Bank (Amit Mehrotra) and BTIG (Gregory Lewis) both maintain Buy at $80 target.</p>
-        <a href="https://perplexity.ai/finance/INSW" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Perplexity Finance — INSW &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">Tanker rates from Baltic Exchange (BDTI/BCTI), S&P Global/Platts, and Lloyd's List</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">BDTI: 3,705 (Apr 1, 2026) vs 1,900 pre-crisis (+95%). BCTI: 1,966. VLCC spot rate peak: $519,104/day (Platts, March 3). Current: ~$356,500/day MEG-China (TD3C route). Suezmax TD6: $344,200. Aframax TD19: $293,400. Product tanker rates from Compass Maritime weekly reports.</p>
-        <a href="https://www.balticexchange.com/en/data/market-data.html" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Baltic Exchange &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">GDELT Project: global news conflict intensity time series</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Live API query to api.gdeltproject.org tracking daily article volume for Iran+Hormuz+tanker across 65 languages. 13,825 articles in 38 days. Peak 991 articles/day on March 12 (first VLCC attack). News volume leads tanker rate moves by 1-3 days — a real-time leading indicator.</p>
-        <a href="https://api.gdeltproject.org/api/v2/doc/doc?query=Iran+Hormuz+oil+tanker&mode=timelinevolraw&startdatetime=20260228000000&enddatetime=20260407235959&format=json" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: GDELT Project v2 API &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">Copernicus Sentinel SAR satellite imagery — vessel tracking and strike damage</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">EU Sentinel-1D (launched Nov 2025, public data from Apr 2, 2026). Sentinel-2 confirmed tanker SAFEEN PRESTIGE double-strike (March 4 + March 18). Sentinel-1 SAR tracked IRIS Dena oil slick off Sri Lanka for 9 days. SAR detects dark/AIS-off vessels through clouds and at night.</p>
-        <a href="https://dataspace.copernicus.eu" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Copernicus Data Space &#8599;</a>
-      </div>
-    </details>
-  </li>
-  <li style="border-bottom:1px solid #30363d;">
-    <details>
-      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
-        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
-        <span style="color:#c9d1d9;font-size:0.85rem;">Discord community scanning — 64,000 member Dumb Money server</span>
-      </summary>
-      <div style="padding:0 0 1rem 1.5rem;">
-        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Exported 11 channels using DiscordChatExporter CLI. Scanned every message for INSW, tanker, Hormuz, VLCC, maritime keywords. Result: zero mentions of INSW across 64,000 members during the entire crisis. Confirms zero retail trader awareness — the undiscovery thesis.</p>
-        <a href="https://dumbmoney.tv" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Dumb Money Discord (read-only) &#8599;</a>
-      </div>
-    </details>
-  </li>
-</ul>
-    </div>
-    <div class="built-with fade-in">
-      Built entirely with <strong>Perplexity Computer</strong>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ SECTION 12: CONCLUSION ═══════════════ -->
-
-<!-- LATEST DEVELOPMENTS SECTION -->
-
-<!-- ALTERNATIVE DATA SECTION -->
-
-<!-- OSINT INTELLIGENCE SECTION -->
+<!-- ═══════════════ SECTION 5: PERPLEXITY INTELLIGENCE ═══════════════ -->
 <section id="osint" style="background:rgba(91,141,218,0.03);border-top:1px solid rgba(91,141,218,0.15);">
 <div class="container">
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:0.5rem;">
     <span style="width:8px;height:8px;background:#5591C7;border-radius:50%;display:inline-block;box-shadow:0 0 8px #5591C7;"></span>
-    <h2 style="color:#e6edf3;margin:0;">Open-Source Intelligence (OSINT)</h2>
+    <div class="section-num" style="color:#5591C7;">05 — Perplexity Intelligence</div>
+      <h2 style="color:#e6edf3;margin:0;">Open-Source Intelligence (OSINT)</h2>
     <span style="background:rgba(85,145,199,0.15);color:#5591C7;padding:2px 10px;border-radius:4px;font-size:0.7rem;font-weight:700;font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;margin-left:auto;">LIVE SIGNALS &mdash; 9 DATA SOURCES</span>
   </div>
   <p style="color:#8b949e;font-size:0.85rem;margin-bottom:2rem;">Real-time intelligence assembled from open-source signals used by military analysts, hedge funds, and OSINT researchers. Methodology inspired by Bilawal Sidhu's God's Eye View geospatial intelligence platform (1.7M views, cited by defense tech founders and journalists).</p>
@@ -1524,6 +1167,220 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
   </div>
 </div>
 </section>
+<!-- ═══════════════ SECTION 6: TANKER RATES ═══════════════ -->
+<!-- ═══════════════ SECTION 5: TANKER RATES ═══════════════ -->
+<section id="rates">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-num">05 — Market Data</div>
+      <h2>Tanker Rate Explosion</h2>
+    </div>
+    <div class="chart-wrap fade-in">
+      <canvas id="ratesChart" height="360"></canvas>
+    </div>
+    <p class="source-cite fade-in">Source: Baltic Exchange, S&P Global/Platts, Lloyd's List</p>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 7: COMPETITIVE LANDSCAPE ═══════════════ -->
+<!-- ═══════════════ SECTION 6: COMPETITIVE LANDSCAPE ═══════════════ -->
+<section id="comps">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-num">06 — Competitive Landscape</div>
+      <h2>INSW vs. Tanker Peers</h2>
+    </div>
+    <div class="data-table-wrap fade-in">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Price</th>
+            <th>Mkt Cap</th>
+            <th>P/E</th>
+            <th>Div Yield</th>
+            <th class="text-col">Fleet Focus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight">
+            <td>INSW</td><td>~$70.83</td><td>$3.6B</td><td>10.2x</td><td>6%</td>
+            <td class="text-col" style="font-family:'Inter',sans-serif;">Diversified: ALL 5 classes</td>
+          </tr>
+          <tr><td>STNG</td><td>$74.36</td><td>$3.8B</td><td>10.54x</td><td>2%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: MR+LR2 only</td></tr>
+          <tr><td>FRO</td><td>$34.98</td><td>$7.8B</td><td>20.49x</td><td>Reopening</td><td class="text-col" style="font-family:'Inter',sans-serif;">Crude: VLCC+Suez</td></tr>
+          <tr><td>DHT</td><td>$17.59</td><td>$2.9B</td><td>13.82x</td><td>Reopening</td><td class="text-col" style="font-family:'Inter',sans-serif;">Pure VLCC</td></tr>
+          <tr><td>TNK</td><td>$75.82</td><td>$2.5B</td><td>7.22x</td><td>3%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Suez+Afra+LR2</td></tr>
+          <tr><td>ASC</td><td>$15.22</td><td>$47.191M</td><td>17.30x</td><td>2%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: MR+Chemical</td></tr>
+          <tr><td>NAT</td><td>$4.925</td><td>$1.2B</td><td>95.50x</td><td>8%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Pure Suezmax</td></tr>
+          <tr><td>HAFN</td><td>$7.99</td><td>$3.8B</td><td>11.40x</td><td>7%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: LR1+LR2+MR</td></tr>
+          <tr><td>TRMD</td><td>$29.39</td><td>$2.9B</td><td>9.83x</td><td>7%</td><td class="text-col" style="font-family:'Inter',sans-serif;">Product: LR2+MR</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fade-in" style="margin-top:1rem; font-size:0.85rem; color:var(--teal); font-weight:600;">
+      INSW is the ONLY tanker company with significant presence in ALL 5 vessel classes (VLCC, Suezmax, Aframax, LR1, MR)
+    </p>
+    <p class="source-cite fade-in">Source: PitchBook, SEC EDGAR, Perplexity Finance — <span class="as-of-date">as of April 8, 2026</span></p>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 8: MONTE CARLO ═══════════════ -->
+<!-- ═══════════════ SECTION 7: MONTE CARLO ═══════════════ -->
+<section id="monte-carlo">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-num">07 — Quantitative Model</div>
+      <h2>Monte Carlo Simulation</h2>
+      <p style="font-size:0.88rem; color:var(--text-muted); max-width:800px; line-height:1.7; margin-bottom:2rem;">
+        10,000 iterations across 5 Hormuz scenarios calibrated with Polymarket probabilities. Tanker rates modeled as Cholesky-correlated lognormal distributions across all 5 vessel classes. Fleet economics derived from INSW's 10-K filing and Q4 2025 earnings call.
+      </p>
+    </div>
+    <div class="chart-wrap fade-in" style="margin-bottom:2rem;">
+      <canvas id="epsHistogram" height="300"></canvas>
+    </div>
+    <div class="fade-in">
+      <h3 style="margin-bottom:0.5rem;">Percentile Distribution</h3>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Percentile</th><th>EPS</th><th>Price @ 8x P/E</th><th class="mc-current-header">vs. Current ($74.00)</th></tr>
+          </thead>
+          <tbody>
+            <tr class="mc-percentile-row"><td>5th</td><td>$5.9</td><td>$39.38</td><td style="color:var(--red);">-47%</td></tr>
+            <tr class="mc-percentile-row"><td>25th</td><td>$7.16</td><td>$57.27</td><td style="color:var(--green);">-23%</td></tr>
+            <tr class="mc-percentile-row"><td>50th (Median)</td><td>$12.86</td><td>$102.86</td><td style="color:var(--green);">+39%</td></tr>
+            <tr style="background:rgba(32,128,141,0.08);"><td style="color:var(--teal);font-weight:700;">Mean</td><td style="color:var(--teal);font-weight:700;">$21.77</td><td style="color:var(--teal);font-weight:700;">$174</td><td style="color:var(--teal);font-weight:700;">+128%</td></tr>
+            <tr class="mc-percentile-row"><td>75th</td><td>$19.92</td><td>$159.37</td><td style="color:var(--green);">+115%</td></tr>
+            <tr class="mc-percentile-row"><td>95th</td><td>$33.36</td><td>$266.86</td><td style="color:var(--green);">+261%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 9: SCENARIO ANALYSIS ═══════════════ -->
+<!-- ═══════════════ SECTION 8: SCENARIO ANALYSIS ═══════════════ -->
+<section id="scenarios">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-num">08 — Scenario Analysis</div>
+      <h2>Probability-Weighted Outcomes</h2>
+    </div>
+    <div class="chart-wrap fade-in" style="margin-bottom:1.5rem; overflow:visible;">
+      <canvas id="scenarioChart" height="280"></canvas>
+    </div>
+    <p class="fade-in" style="font-size:0.9rem; color:var(--green); font-weight:600; text-align:center;">
+      4 of 5 scenarios (95% combined weight) deliver positive returns from $76.41
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 10: PROBABILITY ═══════════════ -->
+<!-- ═══════════════ SECTION 9: PROBABILITY TABLE ═══════════════ -->
+<section id="probability">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-num">09 — Probability Analysis</div>
+      <h2>Upside Probabilities</h2>
+    </div>
+    <div class="card-grid card-grid-3 fade-in" style="margin-bottom:2rem;">
+      <div class="prob-card">
+        <div class="prob-value mono prob-card-main" style="color:var(--green);">92.7%</div>
+        <div class="prob-label">stock &gt; $76 <span style="color:var(--text-muted);">(current)</span></div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-value mono" style="color:var(--teal);">83.9%</div>
+        <div class="prob-label">stock &gt; $100</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-value mono" style="color:var(--gold);">59%</div>
+        <div class="prob-label">stock &gt; $150</div>
+      </div>
+    </div>
+    <div class="prediction-box fade-in">
+      <h4>Prediction Market Calibration</h4>
+      <div class="pred-item">
+        <span>Polymarket: Hormuz normal by Apr 30 (YES)</span>
+        <span class="pred-val" style="color:var(--gold);">37%</span>
+      </div>
+      <div class="pred-item">
+        <span>Metaculus: Hormuz normal before April 27</span>
+        <span class="pred-val" style="color:var(--green);">38%</span>
+      </div>
+      <div class="pred-item">
+        <span>Brent crude (ceasefire sell-off)</span>
+        <span class="pred-val" style="color:var(--red);">$94.82</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 11: KEY RISKS ═══════════════ -->
+<!-- ═══════════════ SECTION 10: KEY RISKS ═══════════════ -->
+<section id="risks">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-num">10 — Risk Assessment</div>
+      <h2>Key Risks & Counters</h2>
+    </div>
+    <div class="risk-grid fade-in">
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Sudden Ceasefire</div>
+          <p>Iran capitulates or regime change normalizes traffic within weeks, collapsing rates.</p>
+        </div>
+        <div>
+          <div class="counter-title">Counter</div>
+          <p>Only 5% scenario probability per Polymarket. Even Quick Resolution scenario yields $73 stock price (-3%). Rates were already elevated pre-crisis due to sanctions on Russia/Iran dark fleet.</p>
+        </div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Rate Normalization</div>
+          <p>Tanker rates revert to 2024 averages ($37K VLCC) as crisis fades and fleet supply grows.</p>
+        </div>
+        <div>
+          <div class="counter-title">Counter</div>
+          <p>Orderbook deliveries are 2027-2028+. No new supply for 12+ months. Sanctioned fleet (16% of capacity) remains permanently dislocated. Cape reroutes absorb 15-20% of effective fleet.</p>
+        </div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Global Recession</div>
+          <p>Oil demand destruction from economic downturn reduces tanker demand fundamentally.</p>
+        </div>
+        <div>
+          <div class="counter-title">Counter</div>
+          <p>Even in recessions, oil still moves. 2008-09 VLCC rates stayed above $30K/day. INSW breakeven is $15K/day — wide margin of safety. Geopolitical premium persists regardless of demand cycle.</p>
+        </div>
+      </div>
+      <div class="risk-item">
+        <div>
+          <div class="risk-title">Vessel Damage / War Risk</div>
+          <p>INSW vessel struck by missile or mine near conflict zone, causing losses and insurance spikes.</p>
+        </div>
+        <div>
+          <div class="counter-title">Counter</div>
+          <p>0/9 VLCCs near Hormuz. Fleet is operating in safe waters (Cape, Malacca, Atlantic). War risk insurance is a cost but currently passed through to charterers at premium rates.</p>
+        </div>
+      </div>
+      <div class="risk-item risk-item-full">
+        <div>
+          <div class="risk-title">Cyclical Multiple Compression</div>
+          <p>Market refuses to apply higher P/E to cyclical peak earnings, capping stock upside.</p>
+        </div>
+        <div>
+          <div class="counter-title">Counter</div>
+          <p>We use a conservative 8x P/E — below the peer average of 11-13x. Even at 6x, the mean price target is $115 (+59% upside). The 26.1% dividend yield provides return floor independent of multiple.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SECTION 12: LATEST DEVELOPMENTS ═══════════════ -->
 <section id="latest" style="background:rgba(221,105,116,0.03);border-top:1px solid rgba(221,105,116,0.2);">
 <div class="container">
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:2rem;">
@@ -1536,7 +1393,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
 <details style="margin-bottom:0.75rem;" open>
   <summary style="cursor:pointer;list-style:none;background:#1a1f2e;border:1px solid rgba(221,105,116,0.6);border-radius:8px;padding:0.7rem 1.1rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:#8b949e;display:flex;align-items:center;gap:10px;user-select:none;">
     <span class="details-arrow" style="color:#DD6974;font-size:0.85rem;display:inline-block;transition:transform 0.2s;">&#9656;</span>
-    <span style="color:#DD6974;font-weight:700;">APR 8 5:39PM -- Explosions near Lavan refinery. INSW +3.7%. Poly 37% &#8594; 30%. MC re-run: $174 mean (+140%)</span>
+    <span style="color:#DD6974;font-weight:700;">APR 8 5:39PM -- Explosions near Lavan refinery. INSW +3.7%. Poly 37% &#8594; 30%. MC re-run: $174 mean (+128%)</span>
   </summary>
   <div style="margin-top:4px;padding-bottom:4px;">
     <div style="background:#161b22;border:1px solid rgba(221,105,116,0.4);border-radius:10px;padding:1.5rem;margin-bottom:0.5rem;border-top:3px solid #DD6974;">
@@ -1554,8 +1411,8 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
           <div style="color:#8b949e;font-size:0.8rem;line-height:1.55;">Polymarket "Hormuz normal by Apr 30" fell from 37% to 30% YES. Two-day collapse: 62% &#8594; 37% &#8594; 30%. Iran's 10-point plan (Hormuz control, lift all sanctions, US withdrawal) remains the stated framework. Islamabad talks start Friday. Brent $96.67 &#8212; recovering slightly from $91.79 as ceasefire fragility becomes clear.</div>
         </div>
         <div style="background:rgba(32,128,141,0.07);border-radius:6px;padding:0.9rem;">
-          <div style="color:#20808D;font-weight:700;font-size:0.85rem;margin-bottom:4px;">MC Re-Run: $174 Mean Target (+140%)</div>
-          <div style="color:#8b949e;font-size:0.8rem;line-height:1.55;">Scenario weights (30% YES): Quick 7%, Goldman 20%, Extended 38%, Prolonged 30%, Black Swan 5%. Mean EPS: $21.77. Mean target @8x: $174 (+140%). P50: $167. P5 bear: $62. P95 bull: $302. Expected dividend: $18.51/share (25.5% yield at $72). P(profit): 92.7%. Each 7pt Polymarket drop has increased the MC target by ~$9 &#8212; the lower the market prices resolution, the more earnings INSW captures.</div>
+          <div style="color:#20808D;font-weight:700;font-size:0.85rem;margin-bottom:4px;">MC Re-Run: $174 Mean Target (+128%)</div>
+          <div style="color:#8b949e;font-size:0.8rem;line-height:1.55;">Scenario weights (30% YES): Quick 7%, Goldman 20%, Extended 38%, Prolonged 30%, Black Swan 5%. Mean EPS: $21.77. Mean target @8x: $174 (+128%). P50: $167. P5 bear: $62. P95 bull: $302. Expected dividend: $18.51/share (25.5% yield at $72). P(profit): 92.7%. Each 7pt Polymarket drop has increased the MC target by ~$9 &#8212; the lower the market prices resolution, the more earnings INSW captures.</div>
         </div>
       </div>
     </div>
@@ -1602,7 +1459,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
     <div style="background:#161b22;border:1px solid rgba(209,153,0,0.4);border-radius:10px;padding:1.5rem;margin-bottom:0.5rem;border-top:3px solid #D19900;">
       <div style="background:rgba(221,105,116,0.07);border:1px solid rgba(221,105,116,0.2);border-radius:6px;padding:0.85rem;margin-bottom:1rem;">
         <div style="color:#DD6974;font-size:0.78rem;font-weight:600;margin-bottom:4px;">HONEST THESIS REASSESSMENT</div>
-        <div style="color:#8b949e;font-size:0.78rem;line-height:1.6;">This is the ceasefire scenario. Polymarket jumped from 22% to 62% YES tonight. Monte Carlo updated immediately. Mean price target drops from $181 to $119 (++140% upside vs. +140% before). Probability of profit at 8x P/E: 65% (vs. 84% before). The thesis is still positive but the risk/reward has materially changed. The critical question: does the ceasefire hold and does Hormuz actually reopen in the next 2 weeks?</div>
+        <div style="color:#8b949e;font-size:0.78rem;line-height:1.6;">This is the ceasefire scenario. Polymarket jumped from 22% to 62% YES tonight. Monte Carlo updated immediately. Mean price target drops from $181 to $119 (+128% upside vs. +128% before). Probability of profit at 8x P/E: 65% (vs. 84% before). The thesis is still positive but the risk/reward has materially changed. The critical question: does the ceasefire hold and does Hormuz actually reopen in the next 2 weeks?</div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.25rem;">
         <div style="background:rgba(209,153,0,0.07);border-radius:6px;padding:0.9rem;">
@@ -1625,7 +1482,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
         </div>
         <div style="background:rgba(32,128,141,0.05);border-radius:6px;padding:0.8rem;">
           <div style="color:#e6edf3;font-weight:600;font-size:0.82rem;margin-bottom:4px;">Updated Monte Carlo (Polymarket 62%)</div>
-          <div style="color:#8b949e;font-size:0.78rem;line-height:1.55;">Mean target: $174 (+140%). P(profit at 8x): 65%. Expected dividend: $18.51/share (25.5% yield). Bear P5: $39 (-47%) — now a real downside if deal holds and Hormuz fully reopens. Bull P95: $267 (+261%) if ceasefire fails. The distribution is wider and more symmetric than before. This is now a higher-risk, still-positive trade.</div>
+          <div style="color:#8b949e;font-size:0.78rem;line-height:1.55;">Mean target: $174 (+128%). P(profit at 8x): 65%. Expected dividend: $18.51/share (25.5% yield). Bear P5: $39 (-47%) — now a real downside if deal holds and Hormuz fully reopens. Bull P95: $267 (+261%) if ceasefire fails. The distribution is wider and more symmetric than before. This is now a higher-risk, still-positive trade.</div>
         </div>
       </div>
     </div>
@@ -2147,7 +2004,7 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
           <div class="metric-card" style="text-align:center; border-color:var(--green);">
             <div class="card-label">Price Target</div>
             <div class="card-value mono green" style="font-size:2rem;">$174</div>
-            <div style="font-size:0.7rem; color:var(--green); font-weight:600; margin-top:0.25rem;">+140% upside</div>
+            <div style="font-size:0.7rem; color:var(--green); font-weight:600; margin-top:0.25rem;">+128% upside</div>
           </div>
           <div class="metric-card" style="text-align:center; border-color:var(--teal);">
             <div class="card-label">Probability of Profit</div>
@@ -2171,6 +2028,156 @@ details > summary .method-arrow { display: inline-block; transition: transform 0
   </div>
 </section>
 
+
+<!-- ═══════════════ SECTION 11: DATA SOURCES ═══════════════ -->
+<section id="sources">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-num">11 — Methodology</div>
+      <h2>Data Sources & Methodology</h2>
+    </div>
+    <div class="source-grid fade-in" style="margin-bottom:2rem;">
+      <a class="source-tag" href="https://aisstream.io" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">aisstream.io</a>
+      <a class="source-tag" href="https://www.balticexchange.com/en/data/market-data.html" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Baltic Exchange</a>
+      <a class="source-tag" href="https://www.spglobal.com/commodityinsights/en/market-insights/latest-news/oil" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">S&P Global / Platts</a>
+      <a class="source-tag" href="https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-april-30" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Polymarket</a>
+      <a class="source-tag" href="https://www.metaculus.com/questions/42729/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Metaculus</a>
+      <a class="source-tag" href="https://www.sec.gov/Archives/edgar/data/1679049/000110465926020113/0001104659-26-020113-index.htm" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">SEC EDGAR</a>
+      <a class="source-tag" href="https://www.myshiptracking.com/vessels?name=seaways" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">MyShipTracking</a>
+      <a class="source-tag" href="https://maritimeoptima.com" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Maritime Optima</a>
+      <a class="source-tag" href="https://lloydslist.com" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Lloyd's List</a>
+      <a class="source-tag" href="https://www.thestreet.com/investing/goldman-sachs-reset-oil-price-forecast-for-the-rest-of-2026" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Goldman Sachs</a>
+      <a class="source-tag" href="https://www.jpmorgan.com/insights/global-research/commodities" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">JPMorgan</a>
+      <a class="source-tag" href="https://www.investmentbank.barclays.com/our-insights.html" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Barclays</a>
+      <a class="source-tag" href="https://www.morganstanley.com/ideas/energy-commodities" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Morgan Stanley</a>
+      <a class="source-tag" href="https://www.statista.com/topics/1690/tanker-shipping/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Statista (Premium)</a>
+      <a class="source-tag" href="https://pitchbook.com/search?q=International+Seaways" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">PitchBook</a>
+      <a class="source-tag" href="https://github.com/jothepro43/insw-pitch" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;border-color:rgba(32,128,141,0.7);color:#20808D;">GitHub: insw-pitch</a>
+      <a class="source-tag" href="https://www.cbinsights.com/research/maritime-shipping-technology/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">CB Insights</a>
+      <a class="source-tag" href="https://www.perplexity.ai/finance/INSW" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Perplexity Finance</a>
+      <a class="source-tag" href="https://www.perplexity.ai/computer" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Perplexity Computer</a>
+      <a class="source-tag" href="https://www.clarksons.com/shipping-services/market-intelligence/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Clarksons Research</a>
+      <a class="source-tag" href="https://www.compassmaritime.com/tanker-market-insight/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">Compass Maritime</a>
+      <a class="source-tag" href="https://www.bimco.org/shipping-information/markets" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer;">BIMCO / AXSMarine</a>
+    </div>
+    <div class="fade-in">
+      <h3>Methodology</h3>
+      <ul style="list-style:none;padding:0;margin:0;">
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">AIS vessel tracking via aisstream.io WebSocket API</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Real-time VLCC positions verified against MyShipTracking and Maritime Optima. MMSI numbers resolved for all 67 vessels. OSINT methodology cross-validated against Bilawal Sidhu's God's Eye View (ex-Google PM / a16z), which independently confirmed the -92.2% transit collapse and IRGC toll booth corridor.</p>
+        <a href="https://aisstream.io" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: aisstream.io &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">10,000-iteration Monte Carlo with Cholesky-correlated rate distributions</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">5 Hormuz scenarios weighted by Polymarket probabilities. Lognormal rate distributions calibrated to 2024-2026 Baltic Exchange volatility. 62 vessels modeled individually (51 spot + 11 TC-out). Beta-distributed utilization, Poisson off-hire days. 3% effective tax rate (Marshall Islands, Section 883).</p>
+        <a href="https://www.balticexchange.com/en/data/market-data.html" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Baltic Exchange BDTI/BCTI &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">Prediction market calibration using Polymarket and Metaculus</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Polymarket: 62% YES for Hormuz normal by April 30 ($3.4M volume). Metaculus community: 15-20% probability. Used to set scenario probability weights in Monte Carlo. Polymarket's $3.4M volume makes it the most liquid real-money geopolitical forecasting market on this event.</p>
+        <a href="https://polymarket.com/event/strait-of-hormuz-traffic-returns-to-normal-by-april-30" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Polymarket — Hormuz Market &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">Fleet economics from INSW 10-K (SEC EDGAR) and Q4 2025 earnings transcript</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">OPEX rates by vessel class, $14,800/day spot cash breakeven, TC-out vessel rates, fixed quarterly costs (D&A $41.4M, interest $11.2M, G&A $13.0M). Diluted shares outstanding 49,595,945. 87% dividend payout policy (6 consecutive quarters). $724M liquidity, 13% net LTV.</p>
+        <a href="https://www.sec.gov/Archives/edgar/data/1679049/000110465926020113/0001104659-26-020113-index.htm" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: SEC EDGAR — INSW 10-K &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">Competitive landscape from PitchBook, CB Insights, and Perplexity Finance</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">PitchBook: INSW company profile, competitor ranking (DHT #1, Frontline #5). CB Insights: maritime industry research, 90% of global trade by sea. Perplexity Finance: live quotes and analyst ratings for all 9 tanker peers. Deutsche Bank (Amit Mehrotra) and BTIG (Gregory Lewis) both maintain Buy at $80 target.</p>
+        <a href="https://perplexity.ai/finance/INSW" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Perplexity Finance — INSW &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">Tanker rates from Baltic Exchange (BDTI/BCTI), S&P Global/Platts, and Lloyd's List</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">BDTI: 3,705 (Apr 1, 2026) vs 1,900 pre-crisis (+95%). BCTI: 1,966. VLCC spot rate peak: $519,104/day (Platts, March 3). Current: ~$356,500/day MEG-China (TD3C route). Suezmax TD6: $344,200. Aframax TD19: $293,400. Product tanker rates from Compass Maritime weekly reports.</p>
+        <a href="https://www.balticexchange.com/en/data/market-data.html" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Baltic Exchange &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">GDELT Project: global news conflict intensity time series</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Live API query to api.gdeltproject.org tracking daily article volume for Iran+Hormuz+tanker across 65 languages. 13,825 articles in 38 days. Peak 991 articles/day on March 12 (first VLCC attack). News volume leads tanker rate moves by 1-3 days — a real-time leading indicator.</p>
+        <a href="https://api.gdeltproject.org/api/v2/doc/doc?query=Iran+Hormuz+oil+tanker&mode=timelinevolraw&startdatetime=20260228000000&enddatetime=20260407235959&format=json" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: GDELT Project v2 API &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">Copernicus Sentinel SAR satellite imagery — vessel tracking and strike damage</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">EU Sentinel-1D (launched Nov 2025, public data from Apr 2, 2026). Sentinel-2 confirmed tanker SAFEEN PRESTIGE double-strike (March 4 + March 18). Sentinel-1 SAR tracked IRIS Dena oil slick off Sri Lanka for 9 days. SAR detects dark/AIS-off vessels through clouds and at night.</p>
+        <a href="https://dataspace.copernicus.eu" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Copernicus Data Space &#8599;</a>
+      </div>
+    </details>
+  </li>
+  <li style="border-bottom:1px solid #30363d;">
+    <details>
+      <summary style="cursor:pointer;padding:0.85rem 0;display:flex;align-items:center;gap:10px;user-select:none;">
+        <span style="color:#20808D;font-size:0.9rem;transition:transform 0.2s;flex-shrink:0;">&#9656;</span>
+        <span style="color:#c9d1d9;font-size:0.85rem;">Discord community scanning — 64,000 member Dumb Money server</span>
+      </summary>
+      <div style="padding:0 0 1rem 1.5rem;">
+        <p style="color:#8b949e;font-size:0.8rem;line-height:1.65;margin:0 0 0.5rem;">Exported 11 channels using DiscordChatExporter CLI. Scanned every message for INSW, tanker, Hormuz, VLCC, maritime keywords. Result: zero mentions of INSW across 64,000 members during the entire crisis. Confirms zero retail trader awareness — the undiscovery thesis.</p>
+        <a href="https://dumbmoney.tv" target="_blank" rel="noopener" style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#20808D;text-decoration:none;border:1px solid rgba(32,128,141,0.35);padding:2px 8px;border-radius:4px;">Source: Dumb Money Discord (read-only) &#8599;</a>
+      </div>
+    </details>
+  </li>
+</ul>
+    </div>
+    <div class="built-with fade-in">
+      Built entirely with <strong>Perplexity Computer</strong>
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════ VERSION HISTORY ═══════════════ -->
 <section id="version-history" style="background:rgba(32,128,141,0.03);border-top:1px solid rgba(32,128,141,0.2);padding:3rem 0;">
@@ -2282,7 +2289,7 @@ const CONFIG = {
 
   // Monte Carlo results (re-run when Polymarket shifts >5pts)
   mc_mean_target:      174,
-  mc_upside_pct:       140,
+  mc_upside_pct:       128,
   mc_p_profit:         92.7,
   mc_div_yield:        25.5,
   mc_mean_dividend:    18.51,
